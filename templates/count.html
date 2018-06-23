@@ -1,0 +1,16 @@
+<h1>Result Count</h1>
+<br>
+<a href = {% url 'home'%}>Home</a>
+<br>
+<h1>Text</h1>
+{{ fulltext }}
+<br>
+
+<h1>Number of words</h1>
+{{ word_count }}
+<br>
+
+<h1>Most common words</h1>
+{% for word, count_total in words %}
+<b>{{ word }}</b> - {{count_total}} <br>
+{% endfor %}
